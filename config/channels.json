@@ -1,0 +1,13 @@
+{
+  "My Channel 1": {
+    "channel_id": "UCxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "token_file": "credentials/oauth/channel1.json",
+    "account": "account1",
+    "watch_folder_id": "your-google-drive-folder-id"
+  },
+  "My Channel 2": {
+    "channel_id": "UCxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "token_file": "credentials/oauth/channel2.json",
+    "account": "account1"
+  }
+}

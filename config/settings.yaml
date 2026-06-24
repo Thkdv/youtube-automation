@@ -1,0 +1,48 @@
+# ─── Spreadsheet ─────────────────────────────────────────────────────────────
+spreadsheet_id: "YOUR_GOOGLE_SPREADSHEET_ID_HERE"
+
+# ─── Column headers (must match your sheet exactly, case-insensitive) ─────────
+columns:
+  title:          "Title"
+  description:    "Description"
+  tags:           "Tags"
+  video_link:     "Video Link"
+  playlist:       "Playlist"
+  schedule_date:  "Schedule Posting Date"
+  schedule_time:  "Schedule Posting Time"
+  status:         "Status"
+  completed:      "Completed"
+  video_id:       "Video ID"
+  timezone_col:   "Timezone"
+
+# ─── Status values ────────────────────────────────────────────────────────────
+status:
+  ready: "Ready For Upload"
+
+completed:
+  success: "Success"
+  failed:  "Failed"
+
+# ─── Timezone ─────────────────────────────────────────────────────────────────
+timezone: "Europe/London"
+
+# ─── Paths ────────────────────────────────────────────────────────────────────
+channels_config: "config/channels.json"
+
+credentials:
+  master_token:   "credentials/oauth/master_token.json"
+  client_secrets: "credentials/client_secrets.json"
+  oauth_dir:      "credentials/oauth"
+
+# ─── YouTube upload defaults ──────────────────────────────────────────────────
+upload:
+  category_id:   "22"    # 22 = People & Blogs
+  made_for_kids: false
+
+# ─── Rate limiting ────────────────────────────────────────────────────────────
+rate_limit:
+  max_uploads_per_run:       6    # max uploads per cron run
+  max_uploads_per_day:       50   # hard daily cap per channel
+  delay_min_seconds:         90   # minimum delay between uploads
+  delay_max_seconds:         120  # maximum delay between uploads
+  delay_between_channels:    600  # 10 min wait between switching channels
