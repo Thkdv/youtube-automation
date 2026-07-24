@@ -3,7 +3,8 @@
     "channel_id": "UCxxxxxxxxxxxxxxxxxxxxxxxxx",
     "token_file": "credentials/oauth/channel1.json",
     "account": "account1",
-    "watch_folder_id": "your-google-drive-folder-id"
+    "watch_folder_id": "your-google-drive-folder-id",
+    "content_queue_niche": "topic/niche description passed to the script generator"
   },
   "My Channel 2": {
     "channel_id": "UCxxxxxxxxxxxxxxxxxxxxxxxxx",

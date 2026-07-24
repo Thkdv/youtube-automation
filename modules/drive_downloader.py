@@ -77,6 +77,19 @@ class DriveDownloader:
                 backoff *= 2
         return False
 
+    def get_file_name(self, drive_url) -> str:
+        """Look up a Drive file's name without downloading it."""
+        file_id = self._extract_id(drive_url)
+        if not file_id:
+            logger.error("Invalid Drive URL: %s", drive_url)
+            return ""
+        try:
+            meta = self._svc.files().get(fileId=file_id, fields="name", supportsAllDrives=True).execute()
+            return meta.get("name", "")
+        except Exception as exc:
+            logger.error("Drive file lookup failed (id=%s): %s", file_id, exc)
+            return ""
+
     @staticmethod
     def _extract_id(url):
         m = re.search(r"/d/([a-zA-Z0-9-_]+)", url)

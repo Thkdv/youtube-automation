@@ -64,13 +64,13 @@ def main():
             row_values = {
                 "title":         metadata.get("title", ""),
                 "description":   metadata.get("description", ""),
-                "tags":          metadata.get("tags", ""),
+                "tags":          ", ".join(metadata.get("tags", [])) if isinstance(metadata.get("tags"), list) else metadata.get("tags", ""),
                 "video_link":    watcher.file_link(video_file),
                 "playlist":      metadata.get("playlist", ""),
                 "schedule_date": metadata.get("schedule_date", ""),
                 "schedule_time": metadata.get("schedule_time", ""),
                 "status":        settings["status"]["ready"],
-                "timezone_col":  "UTC+01:00",
+                "timezone_col":  settings["timezone"],
             }
 
             if args.live:

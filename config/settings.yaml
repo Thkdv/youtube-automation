@@ -34,6 +34,12 @@ credentials:
   client_secrets: "credentials/client_secrets.json"
   oauth_dir:      "credentials/oauth"
 
+# ─── Voiceover provider (swappable — change provider without touching pipeline code) ──
+voiceover:
+  provider: "elevenlabs"
+  voice_id: "pNInz6obpgDQGcFmaJgB"   # Adam
+  model: "eleven_turbo_v2_5"
+
 # ─── YouTube upload defaults ──────────────────────────────────────────────────
 upload:
   category_id:   "22"    # 22 = People & Blogs
